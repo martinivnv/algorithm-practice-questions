@@ -11,8 +11,11 @@ class Solver(object):
     def __init__(self):
         pass
 
+    # O(N) time complexity and O(1) space complexity, where N is the length of the shorter string
     def check(self, string1, string2):
         if abs(len(string1) - len(string2)) > 1:
+            return False
+        elif string1 == string2:
             return False
         elif len(string1) > len(string2):
             return self.compare_strings(string1, string2)
@@ -26,7 +29,7 @@ class Solver(object):
                             diff_found = True
                         else:
                             return False
-            return diff_found
+            return True
     
     def compare_strings(self, hi_string, lo_string):
         diff_found = False
@@ -41,8 +44,9 @@ class Solver(object):
 
 if __name__ == "__main__":
     s = Solver()
-    print(s.check("pale", "ple"))
-    print(s.check("pales", "pale"))
-    print(s.check("pale", "pale"))
-    print(s.check("pale", "bale"))
-    print(s.check("pale", "bake"))
+    print(s.check("pale", "ple"))       # True
+    print(s.check("pales", "pale"))     # True
+    print(s.check("palest", "pale"))    # False
+    print(s.check("pale", "pale"))      # False
+    print(s.check("pale", "bale"))      # True
+    print(s.check("pale", "bake"))      # False
