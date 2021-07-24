@@ -13,11 +13,14 @@ class Solver(object):
     def __init__(self):
         pass
 
+    # O(N) time complexity and 
     def check(self, str):
         if len(str) == 1:
             return True
-
         chars = {}
+        # Store each letter/char in the string i a hash table
+        # If the number of times that the char appears is even, store True
+        # If the char appears an odd number of times, store False
         for letter in str:
             letter = letter.lower()
             if letter in chars:
@@ -25,18 +28,9 @@ class Solver(object):
             else:
                 chars[letter] = False
         print(chars)
-        if len(str) % 2 == 0:
-            return self.check_even(chars)
-        else:
-            return self.check_odd(chars)
-    
-    def check_even(self, chars):
-        for letter, bool in chars.items():
-            if bool is False:
-                return False
-        return True
-
-    def check_odd(self, chars):
+        
+        # Check that all of the chars appear an even number of times
+        # Up to one letter is allowed to appear an odd number of times ( if it is the middle )
         middle_found = False
         for letter, bool in chars.items():
             if bool is False:
@@ -50,4 +44,6 @@ if __name__ == "__main__":
     s = Solver()
     print(s.check("racecar"))
     print(s.check("zzz"))
-    print(s.check("cdcdcd"))
+    print(s.check("cdcdcdaa"))
+    print(s.check("saippuakivikauppias"))
+    print(s.check("fjdkdalk"))
