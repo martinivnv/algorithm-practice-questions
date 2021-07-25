@@ -57,24 +57,24 @@ class SLinkedList(object):
             print(current_node.data)
             current_node = current_node.next
 
+if __name__ == "__main__":
+    list = SLinkedList()
+    list.head = Node("Mon")
+    e2 = Node("Tue")
+    e3 = Node("Wed")
+    e4 = Node("Thu")
+    e5 = Node("Fri")
 
-list = SLinkedList()
-list.head = Node("Mon")
-e2 = Node("Tue")
-e3 = Node("Wed")
-e4 = Node("Thu")
-e5 = Node("Fri")
+    list.head.next = e2
+    e2.next = e3
+    e3.next = e4
+    e4.next = e5
 
-list.head.next = e2
-e2.next = e3
-e3.next = e4
-e4.next = e5
+    list.append_beg("Sun")
+    list.append_end("Sat")
 
-list.append_beg("Sun")
-list.append_end("Sat")
-
-list.insert(e2, "Martinday")
-list.print_list()
-print(list.remove("Martinday"))
-print(list.remove("Jubeday"))
-list.print_list()
+    list.insert(e2, "Martinday")
+    list.print_list()
+    print(list.remove("Martinday"))
+    print(list.remove("Jubeday"))
+    list.print_list()
