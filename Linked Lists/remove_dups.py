@@ -12,6 +12,7 @@ class Solver(object):
     def __init__(self):
         pass
 
+    # O(N) time complexity, where N is number of elements in the linked list
     def remove_dups(self, node):
         dataset = set(())
         previous = None

@@ -13,6 +13,7 @@ class Solver(object):
     def __init__(self):
         pass
 
+    # O(N) time complexity and O(1) space complexity
     def find(self, linked_list, k):
         last = linked_list.head
         for i in range(k-1):
