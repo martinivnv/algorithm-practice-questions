@@ -9,16 +9,14 @@ class Solver(object):
     def __init__(self):
         pass
 
+    # O(1) time complexity
     def delete(self, list, node):
-        previous = None
-        current = list.head
-        while current.next is not None:
-            if current.next == node:
-                previous = current
-                current = current.next
-                previous.next = current.next
-            else:
-                current = current.next
+        if node is None or node.next is None:
+            return False
+        next_node = node.next
+        node.data = next_node.data  # Copy the data from the next node to the given node
+        node.next = next_node.next  # Delete the next node
+        return True
 
 if __name__ == "__main__":
     list = SLinkedList()
