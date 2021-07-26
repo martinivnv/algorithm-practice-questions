@@ -56,6 +56,7 @@ class SLinkedList(object):
         while current_node is not None:
             print(current_node.data)
             current_node = current_node.next
+        print()
 
 if __name__ == "__main__":
     list = SLinkedList()
