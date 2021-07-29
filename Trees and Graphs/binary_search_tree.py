@@ -23,10 +23,11 @@ class Node:
             else:
                 self.data = data
 
+    # In-order traversal
     def print(self):
-        print(self.data)
         if self.left:
             self.left.print()
+        print(self.data)
         if self.right:
             self.right.print()
 
