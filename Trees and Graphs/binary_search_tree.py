@@ -23,6 +23,13 @@ class Node:
             else:
                 self.data = data
 
+    def print(self):
+        print(self.data)
+        if self.left:
+            self.left.print()
+        if self.right:
+            self.right.print()
+
 if __name__ == "__main__":
     tree = Node(8)
     tree.insert(4)
@@ -30,3 +37,4 @@ if __name__ == "__main__":
     tree.insert(2)
     tree.insert(6)
     tree.insert(20)
+    tree.print()
