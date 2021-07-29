@@ -6,7 +6,7 @@
 Loop through first string and check if each character is in the second string
 """
 
-class Solver(object):
+class Solver:
     def __init__(self):
         pass
 

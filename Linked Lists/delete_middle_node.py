@@ -5,7 +5,7 @@
 
 from singly_linked_list import Node, SLinkedList
 
-class Solver(object):
+class Solver:
     def __init__(self):
         pass
 

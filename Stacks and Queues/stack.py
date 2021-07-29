@@ -1,8 +1,8 @@
 # Implement a stack from scratch
 # 07 28 2021
 
-class Stack(object):
-    class Node(object):
+class Stack:
+    class Node:
         def __init__(self, data):
             self.data = data
             self.next = None

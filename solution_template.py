@@ -4,7 +4,7 @@
 # Hints:
 # Hint 1
 
-class Solver(object):
+class Solver:
     def __init__(self):
         pass
 

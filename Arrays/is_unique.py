@@ -3,7 +3,7 @@
 # Assuming ASCII with 128 characters
 # 07 23 2021
 
-class String(object):
+class String:
     def __init__(self, string):
         self.string = string
 

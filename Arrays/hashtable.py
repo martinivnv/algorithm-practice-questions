@@ -1,7 +1,7 @@
 # 07 23 2021
 # Implement hash table from scratch.
 
-class HashTable(object):
+class HashTable:
     def __init__(self, length=4):
         # Initiate our array with empty values.
         self.array = [None] * length

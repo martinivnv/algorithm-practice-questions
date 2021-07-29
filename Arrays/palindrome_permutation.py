@@ -9,7 +9,7 @@
 # Have you tried a hash table? You should be able to get this down to O(N) time. 
 # Can you reduce the space usage by using a bit vector? 
 
-class Solver(object):
+class Solver:
     def __init__(self):
         pass
 

@@ -1,12 +1,12 @@
 # Implement a singly linked list from scratch
 # 07 24 2021
 
-class Node(object):
+class Node:
     def __init__(self, d):
         self.data = d
         self.next = None
     
-class SLinkedList(object):
+class SLinkedList:
     def __init__(self):
         self.head = None
     

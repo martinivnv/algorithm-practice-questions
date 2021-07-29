@@ -1,8 +1,8 @@
 # Implement a queue from scratch
 # 07 28 2021
 
-class Queue(object):
-    class Node(object):
+class Queue:
+    class Nodes:
         def __init__(self, data):
             self.data = data
             self.next = None
